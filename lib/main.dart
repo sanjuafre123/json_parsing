@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:json_parsing/screen/provider/home_provider.dat.dart';
+import 'package:json_parsing/screen/routes/routes.dart';
+import 'package:provider/provider.dart';
 
-void main()
-{
-  runApp(const MyApp());
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => HomeProvider(),
+      builder: (context, child) => const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -10,6 +17,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      routes: MyRoutes.myRoutes,
+    );
   }
 }
