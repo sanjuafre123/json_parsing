@@ -5,8 +5,15 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => HomeProvider(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => HomeProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => UserProvider(),
+        ),
+      ],
       builder: (context, child) => const MyApp(),
     ),
   );
