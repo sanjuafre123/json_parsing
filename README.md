@@ -100,3 +100,14 @@ class PhotoModel {
 
 </div>
 
+
+</div>
+
+ <h1 align="center"> 8.2 Usre Json Data </h1>
+
+<div align="center">
+    
+  <img src="https://github.com/user-attachments/assets/0d78106b-f6b8-4912-827c-afad71c568ea" height ="550">
+
+</div>
+
