@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:json_parsing/screen/provider/home_provider.dat.dart';
+import 'package:json_parsing/screen/Lec-8.3/provider/post_provider.dart';
 import 'package:json_parsing/screen/routes/routes.dart';
 import 'package:provider/provider.dart';
 
@@ -12,6 +13,9 @@ void main() {
         ),
         ChangeNotifierProvider(
           create: (context) => UserProvider(),
+        ),
+         ChangeNotifierProvider(
+          create: (context) => PostProvider(),
         ),
       ],
       builder: (context, child) => const MyApp(),
